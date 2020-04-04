@@ -1,5 +1,5 @@
 {
-  "name": "@react-page/plugins-slate",
+  "name": "@nhkhanh/react-page-plugins-slate",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "module": "./lib-es/index.js",

@@ -19,30 +19,13 @@ const withPaste = (plugins: SlatePlugin[], defaultPluginType: string) => (
 
     const text = data.getData('text/plain');
     if (text) {
-      // if there are two subsequent line breks, insert paragraph, otherway insert soft line break
       const lines = text.split('\n');
-
-      let nextWillbeParagraph = false;
-      for (let i = 0; i < lines.length; i++) {
-        const thisLine = lines[i];
-        const nextLine = lines[i + 1];
-
-        if (!thisLine.trim()) {
-          // this line is empty,
-          nextWillbeParagraph = true;
-        } else if (nextWillbeParagraph) {
+      Transforms.insertText(editor, lines[0]);
+      for (let i = 1; i < lines.length; i++) {
           Transforms.insertNodes(editor, {
             type: defaultPluginType,
-            children: [{ text: thisLine }],
+            children: [{ text: lines[i] }],
           });
-          nextWillbeParagraph = false;
-        } else {
-          // add a \n, unless the next line is empty, then its either the last entry or the following wil be a paragraph
-          const nextIsEmpty = !nextLine || !nextLine.trim();
-
-          Transforms.insertText(editor, thisLine + (nextIsEmpty ? '' : '\n'));
-          nextWillbeParagraph = false;
-        }
       }
       return;
     }
