@@ -1,5 +1,5 @@
-import slate from '@react-page/plugins-slate';
-import '@react-page/plugins-slate/lib/index.css';
+import slate from '@nhkhanh/react-page-plugins-slate';
+import '@nhkhanh/react-page-plugins-slate/lib/index.css';
 import React from 'react';
 import customSlatePlugin from './customSlatePlugin';
 
