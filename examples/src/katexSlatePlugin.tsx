@@ -1,5 +1,5 @@
 import React from 'react';
-import { pluginFactories } from '@react-page/plugins-slate';
+import { pluginFactories } from '@nhkhanh/react-page-plugins-slate';
 // @ts-ignore
 import { InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';

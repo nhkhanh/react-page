@@ -1,4 +1,4 @@
-import { pluginFactories } from '@react-page/plugins-slate';
+import { pluginFactories } from '@nhkhanh/react-page-plugins-slate';
 import React from 'react';
 
 export default pluginFactories.createComponentPlugin<{

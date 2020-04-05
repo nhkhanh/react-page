@@ -21,7 +21,7 @@
  */
 
 import { ContentPluginProps, EditableType, LayoutPluginProps, Plugins } from '@react-page/core';
-import slate from '@react-page/plugins-slate';
+import slate from '@nhkhanh/react-page-plugins-slate';
 import { mount, render } from 'enzyme';
 import * as React from 'react';
 import { HTMLRenderer } from '../index';
